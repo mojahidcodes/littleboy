@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+  margin: 0;
+  padding: 24px 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #102a43;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #cbd2d9;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+button {
+  padding: 10px 16px;
+  border: 1px solid #2563eb;
+  background: #3b82f6;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+button:hover {
+  background: #2563eb;
+  border-color: #1d4ed8;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.35);
+}
+
+button:disabled {
+  background: #9ca3af;
+  border-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+#results {
+  min-height: 40px;
+}
+
+.loading {
+  text-align: center;
+  color: #486581;
+  font-style: italic;
+  padding: 16px 0;
+}
+
+.error {
+  text-align: center;
+  color: #b91c1c;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  background: #f0f4f8;
+  border-radius: 10px;
+  border: 1px solid #d9e2ec;
+}
+
+.weather-card .city {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #102a43;
+}
+
+.weather-card .temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2933;
+  margin: 4px 0;
+}
+
+.weather-card .description {
+  font-size: 1rem;
+  color: #486581;
+  text-transform: capitalize;
+}
