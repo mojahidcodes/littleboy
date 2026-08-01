@@ -1,0 +1,172 @@
+/* ---------- Base / reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #eef2f7;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+/* ---------- App container ---------- */
+.app {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  padding: 24px;
+}
+
+.app__title {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #102a43;
+}
+
+/* ---------- Form ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.form__label {
+  font-size: 0.9rem;
+  color: #486581;
+}
+
+.form__input {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: inherit;
+  background: #f5f7fa;
+  border: 1px solid #cbd2d9;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.form__input:focus {
+  background: #ffffff;
+  border-color: #2680c2;
+  box-shadow: 0 0 0 3px rgba(38, 128, 194, 0.2);
+}
+
+.form__button {
+  width: 100%;
+  padding: 10px 14px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2680c2;
+  border: 1px solid #2680c2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
+}
+
+.form__button:hover {
+  background: #186faf;
+  border-color: #186faf;
+}
+
+.form__button:active {
+  transform: translateY(1px);
+}
+
+.form__button:disabled {
+  background: #9aa5b1;
+  border-color: #9aa5b1;
+  cursor: not-allowed;
+}
+
+/* ---------- Results ---------- */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #f5f7fa;
+  border: 1px solid #e4e7eb;
+  border-radius: 10px;
+  min-height: 64px;
+}
+
+.results--empty {
+  display: none;
+}
+
+.results__city {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #102a43;
+}
+
+.results__temperature {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2680c2;
+}
+
+.results__description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #486581;
+  text-transform: capitalize;
+}
+
+/* ---------- Error state ---------- */
+.results--error {
+  background: #fdecea;
+  border-color: #f5c2c0;
+  color: #9b1c0f;
+}
+
+.results__error {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #9b1c0f;
+}
+
+/* ---------- Loading state ---------- */
+.results--loading {
+  align-items: center;
+  justify-content: center;
+  color: #627d98;
+  font-style: italic;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 360px) {
+  .app {
+    padding: 16px;
+  }
+
+  .app__title {
+    font-size: 1.25rem;
+  }
+}
